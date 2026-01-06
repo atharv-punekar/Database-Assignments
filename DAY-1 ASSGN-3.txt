@@ -1,0 +1,30 @@
+Q.1] Why is normalization important? What problems occur if a database is not normalized?
+
+     Convert the following unnormalized data into 1NF:
+
+     Order_ID   Customer_Name   Products
+     101        Rahul           Laptop, Mouse
+     
+Answer - 
+	Importance Of Normalization -
+	-Normalization helps to organize data in structured way.
+	-It removes duplication of data.
+	-It also prevents insertion, updation and deletion anamolies.
+	-Overall it improves consistency of data and reduce storage waste.
+	
+	Problems if a database is not normalized - 
+	-Data redundancy : Same data is stored multiple times, wasting storage space.
+	-Data inconsistency: Different values for the same data may exist in the database.
+	-Data anomalies: Updating duplicate data can cause inconsistency, inserting data may require missing information, and deleting a record can unintentionally remove important 
+	 related data.
+	 
+	unnormalized data into 1NF - 
+	
+	Order_ID   Customer_Name   Products
+     	
+     	101        Rahul           Laptop
+     	101        Rahul           Mouse
+
+
+
+
