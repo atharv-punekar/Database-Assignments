@@ -1,0 +1,23 @@
+Q.1] A query frequently runs:
+    
+    SELECT * FROM bookings
+    WHERE doctor_id = ?
+    AND appointment_date >= ?
+    AND appointment_date <= ?;
+
+-Propose a composite index
+-Explain column order choice.
+
+Answer - 
+	Composite Index: CREATE INDEX idx ON bookings (doctor_id, appointment_date)
+	Explanation: 
+	-The doctor_id column is kept first in the index because the query always searches for a specific doctor using an equality ("=")condition. This helps the 
+	database quickly find all records related to that doctor.
+	-The appointment_date column is placed next because it is used to filter appointments within a date range("<="), (">="). After selecting the doctor’s records, the database 
+	can easily limit the results to the given dates.
+	-This order follows the way the query is written and helps improve query performance.
+
+
+
+
+
