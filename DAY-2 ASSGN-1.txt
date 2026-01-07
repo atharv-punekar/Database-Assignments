@@ -1,0 +1,22 @@
+Q.1] Given the table:
+      orders
+      id | user_id | status | created_at
+Q.2] Suggest appropriate indexes
+Q.3] Explain why you chose them
+
+Answer - 
+	1) Primary Key Index on "id"
+	   - PRIMARY KEY (id)
+	   Reason - Primary key is unique, not null and identifies each record based on order id, helps for fast retrieval
+	   
+	2) Index on "user_id"
+	   - CREATE INDEX idx ON orders(user_id)
+	   Reason - Orders are placed by specific user, so user_id index will enable fast fetching of orders based on user's id
+	   
+	3) Composite Index on (user_id, created_at)
+	   - CREATE INDEX idx ON orders(user_id, created_at)
+	   Reason - This index is useful when fetching a user’s orders in chronological order
+
+
+
+
