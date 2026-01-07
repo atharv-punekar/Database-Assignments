@@ -1,0 +1,17 @@
+Q.1] Describe a real-world system where:
+     -Soft deletes are required
+     -Hard deletes are preferred
+     
+Answer - 
+	1) Soft Delete - A soft delete means the data is not permanently removed from the database, it can be recovered if needed.
+	   - Social Media Platform (Instagram):
+	   	Here, soft deletes are commonly used for data such as user accounts. When a user deletes their account the data is not removed completely from the database. Instead, 
+	   	it is marked as inactive and account can be recovered in 30 days.
+	   	
+	2) Hard Delete - A hard delete means the data is permanently removed from the database, cannot be recovered.
+	   - Chat Application (WhatsApp):
+	   	Here, hard deletes are used for temporary or sensitive data like deleted messages, expired media files. When a user permanently deletes a message or when 
+	   	media expires, the data is completely removed from the database.
+	
+
+
